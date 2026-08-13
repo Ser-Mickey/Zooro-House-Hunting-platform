@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zooro — Find Your Home in Nairobi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg.txt">
+  
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+  <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="zooroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2563EB" /> <!-- Modern Indigo Blue -->
+        <stop offset="100%" stop-color="#10B981" /> <!-- Fresh Emerald Green -->
+      </linearGradient>
+    </defs>
+    <!-- Roof + Z-letter combined mark -->
+    <path d="M 15 42 L 50 15 L 85 42 L 72 42 L 35 72 L 85 72 L 85 85 L 15 85 L 15 72 L 58 42 Z" fill="url(#zooroGradient)" />
+    <!-- Accent Door/Location Pin element -->
+    <circle cx="50" cy="55" r="7" fill="#2563EB" />
+  </svg>
+  <span class="brand-name">Zooro<span class="brand-dot">.</span></span>
+</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="post.html" class="nav-cta">Post a House</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Find Your Perfect Home<br/>in <span>Nairobi</span></h1>
+      <p>Thousands of verified listings across Westlands, Kilimani, Kahawa West, and more.</p>
+      <form class="search-bar" action="listings.html" method="get">
+        <input type="text" name="area" placeholder="Search by area e.g. Langata, Kilimani..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- FEATURED LISTINGS -->
+  <section>
+    <h2 class="section-title">Featured Listings</h2>
+    <p class="section-subtitle">Hand-picked properties updated daily</p>
+    <div class="listings-grid">
+
+      <article class="listing-card">
+        <img src="house2.1.png" alt="2 bedroom house in Westlands" />
+        <div class="listing-card-body">
+          <span class="listing-tag">Apartment</span>
+          <h3>2 Bedroom — Westlands</h3>
+          <p class="listing-price">KSh 25,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Parking</li>
+            <li>Security</li>
+            <li>Water 24/7</li>
+          </ul>
+          <a href="listings.html" class="btn-view">View Listing →</a>
+        </div>
+      </article>
+
+      <article class="listing-card">
+        <img src="house4.png" alt="Studio apartment near South B" />
+        <div class="listing-card-body">
+          <span class="listing-tag">Studio</span>
+          <h3>Studio — Nairobi West</h3>
+          <p class="listing-price">KSh 12,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Near South B</li>
+            <li>WiFi Ready</li>
+          </ul>
+          <a href="listings.html" class="btn-view">View Listing →</a>
+        </div>
+      </article>
+
+      <article class="listing-card">
+        <img src="house3.png" alt="3 bedroom in Kahawa West" />
+        <div class="listing-card-body">
+          <span class="listing-tag">Family Home</span>
+          <h3>3 Bedroom — Kahawa West</h3>
+          <p class="listing-price">KSh 45,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Garden</li>
+            <li>Borehole</li>
+            <li>DSQ</li>
+          </ul>
+          <a href="listings.html" class="btn-view">View Listing →</a>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="listings.html" class="btn-primary">View All Available Listings →</a>
+    </div>
+  </section>
+
+  <!-- WHY ZOORO -->
+  <div class="features-section">
+    <div class="features-inner">
+      <h2 class="section-title">Why Choose Zooro?</h2>
+      <p class="section-subtitle">We make finding a home in Nairobi simple and stress-free</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h4>Verified Landlords Only</h4>
+          <p>Every landlord on Zooro is vetted before their listings go live.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚫</div>
+          <h4>No Agent Fees</h4>
+          <p>Connect directly with landlords — no middlemen, no hidden charges.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h4>New Listings Daily</h4>
+          <p>Fresh properties added every day across all Nairobi estates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h4>All Nairobi Estates</h4>
+          <p>From Westlands to Kahawa West, we cover every neighbourhood.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">🏠 Zooro<span style="color:var(--gold)">Kenya</span></div>
+        <p>Your trusted platform for finding verified rental homes across Nairobi's finest estates.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="post.html">Post a House</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@zooro.co.ke">hello@zooro.co.ke</a></li>
+          <li><a href="tel:+254700111000">+254 700 111 000</a></li>
+          <li><span>Nairobi, Kenya</span></li>
+          <li><span>Mon–Fri, 8am–6pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zooro Kenya. All rights reserved.</span>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="post.html">Post</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

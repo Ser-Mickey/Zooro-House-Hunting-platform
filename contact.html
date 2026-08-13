@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Zooro Kenya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg.txt">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+       <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="zooroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2563EB" /> <!-- Modern Indigo Blue -->
+        <stop offset="100%" stop-color="#10B981" /> <!-- Fresh Emerald Green -->
+      </linearGradient>
+    </defs>
+    <!-- Roof + Z-letter combined mark -->
+    <path d="M 15 42 L 50 15 L 85 42 L 72 42 L 35 72 L 85 72 L 85 85 L 15 85 L 15 72 L 58 42 Z" fill="url(#zooroGradient)" />
+    <!-- Accent Door/Location Pin element -->
+    <circle cx="50" cy="55" r="7" fill="#2563EB" />
+  </svg>
+  <span class="brand-name">ooro<span class="brand-dot">.</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="post.html" class="nav-cta">Post a House</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Get In Touch With Us</h1>
+    <p>We respond within 24 hours — Mon to Fri, 8am–6pm</p>
+  </div>
+
+  <div class="contact-layout">
+
+    <!-- CONTACT FORM -->
+    <div>
+      <div class="form-card">
+        <div class="form-header">
+          <h2>Send Us a Message</h2>
+          <p>Have a question about a listing? We're here to help.</p>
+        </div>
+
+        <form action="#" method="post">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="John Kamau..." required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="johnk@gmail.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input type="tel" id="contact-phone" name="phone"
+                   placeholder="+254 700 000 000" />
+          </div>
+
+          <div class="form-group">
+            <label for="user-type">I am a...</label>
+            <select id="user-type" name="user_type">
+              <option value="" disabled selected>Select...</option>
+              <option>Tenant</option>
+              <option>Landlord</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject"
+                   placeholder="e.g. Inquiry about Kahawa West listing" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"
+                      placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="agree" required />
+              I agree to be contacted by Zooro Kenya regarding my enquiry
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message →</button>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- OUR DETAILS SIDEBAR -->
+    <div>
+      <div class="contact-details-card">
+        <h3>Our Details</h3>
+
+        <address style="font-style:normal;">
+          <div class="contact-item">
+            <span class="contact-item-icon">📍</span>
+            <div class="contact-item-text">
+              <p>Address</p>
+              <span>Nairobi, Kenya</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">📞</span>
+            <div class="contact-item-text">
+              <p>Phone</p>
+              <a href="tel:+254700111000">+254 700 111 000</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">✉️</span>
+            <div class="contact-item-text">
+              <p>Email</p>
+              <a href="mailto:hello@zooro.co.ke">hello@zooro.co.ke</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">🕐</span>
+            <div class="contact-item-text">
+              <p>Working Hours</p>
+              <span>Mon–Fri, 8am – 6pm</span>
+            </div>
+          </div>
+        </address>
+
+        <div>
+          <p style="color:rgba(255,255,255,0.55); font-size:0.82rem; text-transform:uppercase;
+                    font-weight:600; letter-spacing:0.5px; margin-bottom:0.8rem;">
+            Follow Zooro
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">🏠 Zooro<span style="color:var(--gold)">Kenya</span></div>
+        <p>Your trusted platform for finding verified rental homes across Nairobi's finest estates.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="post.html">Post a House</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@zooro.co.ke">hello@zooro.co.ke</a></li>
+          <li><a href="tel:+254700111000">+254 700 111 000</a></li>
+          <li><span>Nairobi, Kenya</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zooro Kenya. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

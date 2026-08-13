@@ -1,2 +1,2 @@
-# Zooro-House-Hunting-platform
-Zooro — A web application for finding and listing verified rental properties in Nairobi.
+# Zooro-js-lab
+The file contains the interactivity elements for Zooro House Hunting App
