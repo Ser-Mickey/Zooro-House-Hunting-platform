@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listings — Zooro Kenya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg.txt">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="zooroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2563EB" /> <!-- Modern Indigo Blue -->
+        <stop offset="100%" stop-color="#10B981" /> <!-- Fresh Emerald Green -->
+      </linearGradient>
+    </defs>
+    <!-- Roof + Z-letter combined mark -->
+    <path d="M 15 42 L 50 15 L 85 42 L 72 42 L 35 72 L 85 72 L 85 85 L 15 85 L 15 72 L 58 42 Z" fill="url(#zooroGradient)" />
+    <!-- Accent Door/Location Pin element -->
+    <circle cx="50" cy="55" r="7" fill="#2563EB" />
+  </svg>
+  <span class="brand-name">ooro<span class="brand-dot">.</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" class="active">Listings</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="post.html" class="nav-cta">Post a House</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span id="user-greeting" class="user-greeting"></span>
+        <button id="favorites-btn" class="favorites-btn" title="Saved listings"><span class="heart-icon">♥</span> <span id="favorites-count">0</span></button>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Browse Available Houses</h1>
+    <p>Updated daily — find your next home in Nairobi</p>
+  </div>
+
+  <section>
+
+    <!-- FILTER BAR -->
+    <form class="filter-bar" action="#" method="get">
+      <div class="filter-group">
+        <label for="location">Location</label>
+        <select id="location" name="location">
+          <option value="">All Locations</option>
+          <option>Westlands</option>
+          <option>Kilimani</option>
+          <option>Kahawa West</option>
+          <option>Ngong Road</option>
+          <option>Nairobi West</option>
+          <option>Lavington</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="price">Price Range</label>
+        <select id="price" name="price">
+          <option value="">Any Price</option>
+          <option>Under KSh 10,000</option>
+          <option>KSh 10,000 – 20,000</option>
+          <option>KSh 20,000 – 40,000</option>
+          <option>KSh 40,000+</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="type">House Type</label>
+        <select id="type" name="type">
+          <option value="">All Types</option>
+          <option>Bedsitter</option>
+          <option>Studio</option>
+          <option>1 Bedroom</option>
+          <option>2 Bedroom</option>
+          <option>3 Bedroom</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-primary" style="align-self:flex-end;">Filter</button>
+    </form>
+
+    <!-- LISTINGS GRID -->
+    <div class="listings-grid">
+
+      <article class="listing-card" data-listing-id="listings-westlands-2br">
+        <button class="favorite-btn" aria-label="Save to favorites">♡</button>
+        <img src="house1.png" alt="2 bedroom Westlands" />
+        <div class="listing-card-body">
+          <span class="listing-tag">2 Bedroom</span>
+          <h3>2 Bedroom — Westlands</h3>
+          <p class="listing-price">KSh 25,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Parking</li><li>Security</li>
+          </ul>
+          <a href="#" class="btn-view">View Details →</a>
+        </div>
+      </article>
+
+      <article class="listing-card" data-listing-id="listings-kilimani-studio">
+        <button class="favorite-btn" aria-label="Save to favorites">♡</button>
+        <img src="house2.png" alt="Studio Kilimani" />
+        <div class="listing-card-body">
+          <span class="listing-tag">Studio</span>
+          <h3>Studio — Kilimani</h3>
+          <p class="listing-price">KSh 12,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Available Now</li><li>WiFi Ready</li>
+          </ul>
+          <a href="#" class="btn-view">View Details →</a>
+        </div>
+      </article>
+
+      <article class="listing-card" data-listing-id="listings-kahawa-west-3br">
+        <button class="favorite-btn" aria-label="Save to favorites">♡</button>
+        <img src="house3.png" alt="3 bedroom Kahawa West" />
+        <div class="listing-card-body">
+          <span class="listing-tag">3 Bedroom</span>
+          <h3>3 Bedroom — Kahawa West</h3>
+          <p class="listing-price">KSh 85,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Available</li><li>Garden</li>
+          </ul>
+          <a href="#" class="btn-view">View Details →</a>
+        </div>
+      </article>
+
+      <article class="listing-card" data-listing-id="listings-ngong-road-bedsitter">
+        <button class="favorite-btn" aria-label="Save to favorites">♡</button>
+        <img src="house1.png" alt="Bedsitter Ngong Road" />
+        <div class="listing-card-body">
+          <span class="listing-tag">Bedsitter</span>
+          <h3>Bedsitter — Ngong Road</h3>
+          <p class="listing-price">KSh 8,000 <span>/ month</span></p>
+          <ul class="listing-features">
+            <li>Available Now</li><li>Water</li>
+          </ul>
+          <a href="#" class="btn-view">View Details →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- BONUS: SUMMARY TABLE -->
+    <h2 class="section-title" style="margin-top:3rem;">Quick Reference Table</h2>
+    <p class="section-subtitle">Summary of currently available listings</p>
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Type</th>
+          <th>Price (KSh/mo)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Westlands</td>
+          <td>2 Bedroom</td>
+          <td>25,000</td>
+          <td><span class="status-badge available">Available</span></td>
+        </tr>
+        <tr>
+          <td>Kilimani</td>
+          <td>Studio</td>
+          <td>12,000</td>
+          <td><span class="status-badge available">Available</span></td>
+        </tr>
+        <tr>
+          <td>Kahawa West</td>
+          <td>3 Bedroom</td>
+          <td>85,000</td>
+          <td><span class="status-badge available">Available</span></td>
+        </tr>
+        <tr>
+          <td>Ngong Road</td>
+          <td>Bedsitter</td>
+          <td>8,000</td>
+          <td><span class="status-badge available">Available</span></td>
+        </tr>
+        <tr>
+          <td>Nairobi West</td>
+          <td>1 Bedroom</td>
+          <td>18,000</td>
+          <td><span class="status-badge taken">Taken</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">🏠 Zooro<span style="color:var(--gold)">Kenya</span></div>
+        <p>Your trusted platform for finding verified rental homes across Nairobi's finest estates.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="post.html">Post a House</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@zooro.co.ke">hello@zooro.co.ke</a></li>
+          <li><a href="tel:+254700111000">+254 700 111 000</a></li>
+          <li><span>Nairobi, Kenya</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zooro Kenya. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
