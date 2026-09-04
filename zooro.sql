@@ -1,31 +1,56 @@
 -- Zooro Real Estate Database Schema
-CREATE DATABASE IF NOT EXISTS zooro_db;
-USE zooro_db;
+CREATE DATABASE IF NOT EXISTS zooro;
+USE zooro;
 
--- 1. Table for Property Listings (Landlord submissions)
-CREATE TABLE IF NOT EXISTS property_listings (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    landlord_name VARCHAR(255) NOT NULL,
-    phone VARCHAR(50) NOT NULL,
-    location VARCHAR(255) NOT NULL,
-    house_type VARCHAR(50) NOT NULL,
-    rent DECIMAL(10, 2) NOT NULL,
-    available_from DATE NOT NULL,
-    description TEXT,
-    photo_path VARCHAR(255),
+-- 1. Landlords Table
+CREATE TABLE IF NOT EXISTS landlords (
+    landlord_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    national_id VARCHAR(50) UNIQUE NOT NULL,
+    jurisdiction_location VARCHAR(100) NOT NULL,
+    is_verified TINYINT(1) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 2. Table for House Hunt Requests (Tenant requests)
-CREATE TABLE IF NOT EXISTS house_hunts (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    hunt_name VARCHAR(255) NOT NULL,
-    hunt_phone VARCHAR(50) NOT NULL,
-    hunt_location VARCHAR(255) NOT NULL,
-    hunt_house_type VARCHAR(50) NOT NULL,
-    hunt_budget VARCHAR(50) NOT NULL,
-    hunt_timeframe VARCHAR(50) NOT NULL,
-    hunt_notes TEXT,
+-- 2. Property Listings Table
+CREATE TABLE IF NOT EXISTS property_listings (
+    property_id INT AUTO_INCREMENT PRIMARY KEY,
+    landlord_id INT NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    house_type VARCHAR(50) NOT NULL,
+    rent DECIMAL(10,2) NOT NULL,
+    status ENUM('available', 'booked', 'occupied') DEFAULT 'available',
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (landlord_id) REFERENCES landlords(landlord_id) ON DELETE CASCADE
+);
+
+-- 3. House Hunt Requests Table
+CREATE TABLE IF NOT EXISTS house_hunt_requests (
+    hunt_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_name VARCHAR(100) NOT NULL,
+    client_phone VARCHAR(20) NOT NULL,
+    hunt_location VARCHAR(100) NOT NULL,
+    house_type VARCHAR(50) NOT NULL,
+    max_budget DECIMAL(10,2) NOT NULL,
+    timeframe VARCHAR(50) NOT NULL,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 4. Contact Messages Table
+CREATE TABLE IF NOT EXISTS contact_messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    user_type VARCHAR(20),
+    subject VARCHAR(150),
+    message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
