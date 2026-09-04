@@ -53,7 +53,20 @@ CREATE TABLE IF NOT EXISTS contact_messages (
     message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+-- 5. Property Bookings / Applications Table
+-- Added: process_booking.php inserted into this table but zooro.sql never defined it,
+-- so every booking submission fataled with "Table 'zooro.property_bookings' doesn't exist".
+CREATE TABLE IF NOT EXISTS property_bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    property_title VARCHAR(150) NOT NULL,
+    property_price DECIMAL(10,2) DEFAULT 0,
+    client_name VARCHAR(100) NOT NULL,
+    client_phone VARCHAR(20) NOT NULL,
+    client_email VARCHAR(100),
+    preferred_date DATE NOT NULL,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 -- Sample Initial Data for Demo / Testing
 INSERT INTO property_listings (landlord_name, phone, location, house_type, rent, available_from, description) VALUES
 ('John Kamau', '+254712345678', 'Westlands', '2 Bedroom', 25000.00, '2026-09-01', 'Spacious apartment near Sarit Centre with 24/7 water and security.'),
