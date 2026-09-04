@@ -43,7 +43,7 @@ function showFieldError(field, message) {
   field.insertAdjacentElement('afterend', error);
 }
 
-/** Removes the error state + message for a single field. */
+/** Removes error state + message for a single field. */
 function clearFieldError(field) {
   field.classList.remove('input-error');
   const next = field.nextElementSibling;
@@ -185,6 +185,8 @@ function initPostForm() {
     }
 
     // Submit validated data to process_listing.php
+    form.action = 'post.php';
+    form.method = 'POST';
     form.submit();
   });
 
